@@ -1,8 +1,7 @@
 README.md: guessinggame.sh
-	echo -n "#" > $@
-	basename "`pwd`" >> $@
-	echo "\nREADME.md is made at" `date` >> $@
-	echo $^ "has" `cat $^ | wc -l` "lines" >> $@
+	echo "# The-Unix-Workbench-Project" > $@
+	echo '`make` was run at' `date`. >> $@
+	echo '`$^`' "has" `cat $^ | wc -l` "lines." >> $@
 
 clean:
 	rm -f README.md
